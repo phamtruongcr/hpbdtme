@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width,initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=no"> 
+ <title>Tặng bé ❤️</title>
+ <link rel="stylesheet" href="css/jquery.fullPage.css">
+ <link rel="stylesheet" href="css/memories.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="music-banner" class="music-banner loop">
+    <div class="content">
+      <h2>Bé TMe ❤</h2>
+      <!-- <p>Bé nhớ nhập đúng thông tin để vào nhé...</p> -->
+      <button class="btnn" onclick="playMusic()" id="playButton">
+        <!-- <span class="icon">▶️</span> -->
+        <span class="text">Bé nhấn vào đây ❤</span>
+      </button>
+    </div>
+  </div>
+  <!-- <audio id="myAudio" src="./music/dungvetrnha.mp3"></audio> -->
+  <audio id="myAudio" class="music" controls  src="./music/nangAmXaDan.mp3#t=9,500" type="audio/mpeg">
+  <script>
+    function playMusic() {
+      const audio = document.getElementById('myAudio');
+      const banner = document.getElementById('music-banner');
+      
+      audio.play();
+      // Thêm hiệu ứng fade out khi ẩn banner
+      banner.style.opacity = '0';
+      banner.style.transition = 'opacity 0.5s ease-out';
+      
+      setTimeout(() => {
+        banner.style.display = 'none';
+      }, 500);
+    }
+    </script>
+  <style>
+  .music-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .content {
+    text-align: center;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #ccc;
+  }
+  
+  .btnn {
+    padding: 15px 40px;
+    font-size: 1.2em;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .btnn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.4);
+  }
+  
+  .icon {
+    font-size: 1.2em;
+  }
+  
+  /* Animation cho nút */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .btnns {
+    animation: pulse 2s infinite;
+  }
+  </style>
+  <style>
+    * {
+      font-family: "Montserrat", sans-serif !important;
+      font-optical-sizing: auto;
+      font-style: normal;
+        }
+  </style>
+    
+  
+      </audio>
+  <!-- 背景音乐 -->
+  <div style="display:none">
+    <!-- 网易云外链 -->
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=480353&auto=1&height=66"></iframe>
+  </div>
+<div class="bgcolor">
+  <div style="z-index:100;" id="dowebok">
+      <!--第一屏-->
+      <div class="section">
+        <div class="ly-box01">
+          <div class="ly-txt01">
+            <span class="ly-stxt01">TMe ơi! </span>
+            <p class="ly-stxt02">13/03/2026</p>
+            <p class="ly-stxt03">là ngày...</p>
+            <p class="ly-stxt04">Quốc đặc biệt quốc tế...</p>
+            <p class="ly-stxt05">Anh nhầm rồi hi😚</p>
+          </div>
+          <div class="ly-txt02">
+            <p class="ly-stxt06">là ngày</p>
+            <p class="ly-stxt07">bé tròn 18 tuổi.</p>
+
+          </div>
+      </div>
+    </div>
+
+      <!--第二屏-->
+
+      <div class="section">
+          <div class="timeline"></div>
+          <div class="timepoint11"></div>
+          <div class="ly-box11">
+              <div class="ly-txt11">
+                  13/03/2008 ❤
+              </div>
+              <div class="ly-txt12">
+                 Bé vẫn xinh như mỗi ngày
+              </div>
+              <div class="ly-imgbox11">
+                <img class="ly-img11" src="./img/t14.jpg" style="background-size: contain; object-fit: contain;"> 
+              </div>
+          </div>
+          <div class="ly-triangle11"></div>
+
+          <div class="ly-box12">
+              <div class="ly-txt13">
+                13/03/2008 ❤
+              </div>
+              <div class="ly-txt14">
+                <p>Hôm nay là ngày sinh nhật bé ha</p>
+			          <p>Anh chúc bé sinh nhật vui vẻ</p>
+				        <p>Và hạnh phúc nha bé</p>
+                <p>Anh muốn nói với bé</p>
+				        <p>Anh luôn ở bên để cùng bé</p>
+                <p>Chia sẻ mọi khoảnh khắc</p>
+                <p>Từ những điều nhỏ bé nhất</p>
+                <p>Đến những ước mơ lớn lao nhất</p>
+                <p>Nụ cười của bé làm cả bầu trời</p>
+                <p>Trong tim anh bừng sáng</p>
+				
+              </div>
+          </div>
+          <div class="ly-triangle12"></div>
+      </div>
+
+      <!--第三屏-->
+
+      <div class="section">
+          <div class="timeline"></div>
+          <div class="timepoint21"></div>
+          <div class="ly-box21">
+              <div class="ly-txt21">
+                13/03/2008 ❤
+              </div>
+              <div class="ly-txt22">
+                 <p>Bé là bông hoa đẹp nhất</p>
+                 
+              </div>
+              <div class="ly-imgbox21">
+                <img class="ly-img21" src="./img/t2.jpg" style="background-size: contain; object-fit: contain;">
+              </div>
+          </div>
+          <div class="ly-triangle21"></div>
+
+          <div class="ly-box22">
+              <div class="ly-txt23">
+                13/03/2008 ❤
+              </div>
+              <div class="ly-txt24">
+                  <p>Vẫn là cô bé đó</p>
+                  <p>Xinh như một thiên thần </p>
+              </div>
+              <div class="ly-imgbox22">
+                <img class="ly-img22" src="./img/t1.jpg" style="background-size: contain; object-fit: contain;">
+              </div>
+          </div>
+          <div class="ly-triangle22"></div>
+
+           <div class="ly-box23">
+              <div class="ly-txt25">
+                13/03/2008 ❤
+              </div>
+              <div class="ly-txt26">
+                  <p>Đây là bé còn nhỏ xíu phải hông</p>
+                  <p>Bé thật dễ thương</p>
+              </div>
+              <div class="ly-imgbox23">
+                <img class="ly-img23" src="./img/t8.jpg" style="background-size: contain; object-fit: contain;">
+              </div>
+          </div>
+          <div class="ly-triangle23"></div>
+      </div>
+
+      <!--第四屏-->
+
+      <div class="section">
+          <div class="timeline"></div>
+          <div class="timepoint31"></div>
+          <div class="ly-box31">
+              <div class="ly-txt31">
+                13/03/2008 ❤
+              </div>
+              <div class="ly-txt32">
+                  <p>Công túa của anh thích make</p>
+                  <p>Công túa nhớ make cả cho anh nữa nhé</p>
+              </div>
+              <div class="ly-imgbox31">
+                <img class="ly-img31" src="./img/t4.jpg" style="background-size: contain; object-fit: contain;">
+              </div>
+          </div>
+          <div class="ly-triangle31"></div>
+
+          <div class="ly-box32">
+              <div class="ly-txt33">
+                13/03/2008 ❤
+              </div>
+              <div class="ly-txt34">
+                 <p>Bé cứ cười như thế nhé!
+                  Anh muốn được nhìn thấy bé vui
+                 </p>
+              </div>
+              <div class="ly-imgbox31">
+                <img class="ly-img31" src="./img/t6.jpg" style="background-size: contain; object-fit: contain;">
+              </div>
+          </div>
+          <div class="ly-triangle32"></div>
+      </div>
+
+  <!--第五屏-->
+  <!-- <div class="section">
+          <div class="timeline"></div>
+          <div class="timepoint21"></div>
+          <div class="ly-box52">
+              <div class="ly-txt21">
+                13/03/2008 ❤
+              </div>
+              <div class="ly-txt22">
+                <p>Thích từ nụ cười của bé làm tim anh rung động hoài không nghỉ ngơi, hì hì... Anh mong rằng mọi thứ đều làm dịu dàng với bé, cười lên nha bé :3
+                </p>
+              </div>
+              <div class="ly-imgbox21">
+                <img class="ly-img21" src="./img/n15.jfif">
+              </div>
+          </div>
+          <div class="ly-triangle21"></div>
+  </div> -->
+		      <div class="section">
+          <div class="timeline"></div>
+          <div class="timepoint11"></div>
+          <div class="ly-box81">
+              <div class="ly-txt11">
+                Sinh nhật vui vẻ bé yêu của anh
+              </div>
+              <div class="ly-txt82" style="top:8%">
+                  <p class="wwww1">Nguyễn Trà My</p>
+                  <p class="wwww1">13/03/2008</p>
+                
+              </div>
+              <div class="ly-imgbox81">
+                <img class="ly-img81" src="./img/t9.jpg" style="">
+              </div>
+          </div>
+          <div class="ly-triangle11"></div>
+
+          <div class="ly-box82">
+              <div class="ly-txt13">
+                13/03/2008 ❤
+              </div>
+              <div class="ly-txt84">
+                 <p>
+                  TMe ơi! Cảm ơn bé vì đã cho anh cơ hội được ở bên 
+                  và trở thành người yêu của bé.
+                  <br>
+                  Mỗi lần gặp bé, anh luôn thấy lòng mình nhẹ đi một chút.
+                  <br>
+                  Bé dễ thương, ngoan hiền, và nụ cười của bé là điều anh thích nhất — vì mỗi lần bé cười, anh lại thấy vui theo.
+                  <br>
+                  Anh không hứa những điều quá lớn lao,
+                  nhưng anh muốn được là người ở cạnh bé,
+                  là bờ vai khi bé mệt,
+                  là người cùng bé chia sẻ những điều nhỏ bé mỗi ngày.
+                  <br>
+                  Anh biết anh không hoàn hảo nhưng anh sẽ cố gắng để trở thành người tốt hơn vì bé, 
+                  anh mong chúng mình luôn yêu thương và đồng hành cùng nhau ...anh yêu bé.
+                </p>
+      
+                    <a href="../../../indexcopy.html" style="    padding: 10px;
+                    background: #E91E63;
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-weight: 800;
+                    font-size: 17px;
+                    border-radius: 6px;">Bé nhấn vào đây ❤ </a>
+              </div>
+          </div>
+          <div class="ly-triangle82"></div>
+      </div>
+
+       </div>
+  <!--动态方块-->
+  <ul class="bg-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+  </div>
+  <!-- <audio muted src="music/1.mp3" autoplay="autoplay" loop="loop"></audio> -->
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<!-- <script src="js/auto-play.js"></script> -->
+<script src="js/memories.js"></script>
+</body>
+</html>
