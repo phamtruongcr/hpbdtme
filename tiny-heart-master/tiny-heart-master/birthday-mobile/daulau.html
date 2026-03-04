@@ -8,7 +8,8 @@
 
 </head>
 <body>
-  <audio autoplay src="./music/nangAmXaDan.mp3"></audio>
+  <!-- <audio autoplay src="./music/nangAmXaDan.mp3"></audio> -->
+  <audio id="bgMusic" src="./music/nangAmXaDan.mp3" autoplay loop muted></audio>
 <!-- partial:index.partial.html -->
 <div role="img" aria-label="Animated cartoon: Death (a cloaked skeleton with a scythe) receives a text message from JavaScript saying 'CSS is dead!' Disappointed, Death sighs: That guy is so annoying... Maybe it's time I take anohter of its frameworks away...">
 
@@ -407,7 +408,14 @@ a {
   setTimeout(function() {
     window.location.href = "heobay.html";
   }, 22000); // thời gian chuyển trang sau 10 giây (10000 miliseconds)
-  
+
+  const audio = document.getElementById("bgMusic");
+
+  // Khi người dùng chạm màn hình lần đầu
+  document.addEventListener("click", function () {
+    audio.muted = false;
+    audio.play();
+  }, { once: true });
 </script>
 
 <style>

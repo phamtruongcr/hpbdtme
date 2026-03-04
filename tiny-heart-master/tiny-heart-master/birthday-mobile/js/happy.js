@@ -31,6 +31,22 @@ $(function () {
     audio.muted = false;
     audio.play();
   }, { once: true });
+
+  const btn = document.getElementById("albumBtn");
+
+  let isLocked = true;
+
+  // Sau 5 giây mở khóa
+  setTimeout(() => {
+  isLocked = false;
+  }, 5000);
+
+    // Chặn click khi còn bị khóa
+    btn.addEventListener("click", function(e) {
+    if (isLocked) {
+        e.preventDefault(); // chặn chuyển trang
+    }
+    });
 	// $(window).click(function(){
 	// 	$('audio')[0].play();
 	// });

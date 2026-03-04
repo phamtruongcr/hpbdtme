@@ -12,3 +12,11 @@ $('#login-button').click(function (event) {
 		alert("Nhập sai thông tin rồi kìa, Đồ ngốc!");
 	}
 });
+
+const audio = document.getElementById("bgMusic");
+
+  // Khi người dùng chạm màn hình lần đầu
+  document.addEventListener("click", function () {
+    audio.muted = false;
+    audio.play();
+  }, { once: true });
