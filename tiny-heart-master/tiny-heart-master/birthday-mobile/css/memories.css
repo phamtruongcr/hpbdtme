@@ -2739,7 +2739,7 @@
 		border-radius: 8px;
 		position: absolute;
 		left: 23%;
-		top: 5%;
+		top: 2%;
 		overflow: hidden;
 		opacity: 0;
 		-webkit-transform: scale(0.5, 0.5);
@@ -2761,7 +2761,7 @@
 		border-radius: 8px;
 		position: absolute;
 		left: 23%;
-		top:63%;
+		top: 58%;
 		overflow: hidden;
 		opacity: 0;
 		-webkit-transform: scale(0.5, 0.5);
@@ -2912,7 +2912,7 @@
 .ly-img81{
 	position: absolute;
 	width: 100%;
-	bottom: -470px;
+	bottom: -520px;
 	/* height: 658px; */
 }
 /*文本*/

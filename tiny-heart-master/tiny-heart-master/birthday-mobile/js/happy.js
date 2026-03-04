@@ -9,7 +9,7 @@ $(function () {
     setTimeout(function () {
         $('.happy').animate({
             opacity:"1",
-            top:"-4%"
+            top:"-5%"
         },2000);
 
     },6000);
@@ -23,6 +23,14 @@ $(function () {
             top:"85%"
         },2000);
     },9000);
+
+  const audio = document.getElementById("bgMusic");
+
+  // Khi người dùng chạm màn hình lần đầu
+  document.addEventListener("click", function () {
+    audio.muted = false;
+    audio.play();
+  }, { once: true });
 	// $(window).click(function(){
 	// 	$('audio')[0].play();
 	// });
