@@ -9,7 +9,7 @@ $(function () {
     setTimeout(function () {
         $('.happy').animate({
             opacity:"1",
-            top:"-2%"
+            top:"-4%"
         },2000);
 
     },6000);
