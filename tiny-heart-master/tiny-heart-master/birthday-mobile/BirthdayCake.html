@@ -13,9 +13,15 @@
 </head>
 
 <body>
+    <div id="birthdayOverlay">
+        <h1>Chúc mừng sinh nhật bé 🎂💖</h1>
+        <p>Nhấn vào đây để mở điều bất ngờ</p>
+        <button id="startBtn">Bắt đầu</button>
+    </div>
     <!-- <audio src="./music/2.mp3" autoplay="true" loop="true"></audio> -->
     <audio id="bgMusic" src="./music/2.mp3" autoplay loop muted></audio>
-<div class="bg">
+<!-- <div class="bg"> -->
+<div class="bg hiddenContent" id="mainContent">
     <div class="velas">
         <div class="fuego"></div>
         <div class="fuego"></div>
@@ -100,7 +106,7 @@
     </path>
     <path fill="#a88679" d="M173.667,21.571c-33.174,0-111.467,0-147.334,0c-4,0-4-16.002,0-16.002c39.836,0,105.982,0,147.334,0
 		C177.668,5.569,177.667,21.571,173.667,21.571z">
-        <animate id="bizcocho_1" attributeName="d" calcMode="spline" keySplines="0 0 1 1; 0 0 1 1; 0 0 1 1; 0.25 0 1 1; 0 0 1 1; 0.25 0 0.6 1" begin="2s" dur="0.8s" fill="freeze" values="
+        <animate id="bizcocho_1" attributeName="d" calcMode="spline" keySplines="0 0 1 1; 0 0 1 1; 0 0 1 1; 0.25 0 1 1; 0 0 1 1; 0.25 0 0.6 1" begin="indefinite" dur="0.8s" fill="freeze" values="
                           M173.667,21.571c-33.174,0-111.467,0-147.334,0c-4,0-4-16.002,0-16.002c39.836,0,105.982,0,147.334,0
 		C177.668,5.569,177.667,21.571,173.667,21.571z
                           ;
