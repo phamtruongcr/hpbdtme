@@ -230,7 +230,87 @@ body {
         }
     }
 }
+
+.countdown-container {
+    text-align: center;
+    color: #455a64;
+}
+
+.big-number {
+    font-size: 120px;
+    font-weight: bold;
+    color: #ff5c75;
+}
+
+.label {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.time-row {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.time-number {
+    font-size: 60px;
+    font-weight: bold;
+    color: #ff5c75;
+}
+
+.time-label {
+    font-size: 20px;
+}
+
+.message {
+    font-size: 26px;
+    margin-top: 20px;
+}
+
+.highlight {
+    color: #ff5c75;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+/* Ẩn nút ban đầu */
+.love-button {
+    display: none;
+}
+
 </style>
+
+<div id="countdownContainer" class="countdown-container">
+
+    <div class="big-number" id="daysBig">0</div>
+    <div class="label">Ngày</div>
+
+    <div class="time-row">
+        <div class="time-box">
+            <div class="time-number" id="hours">0</div>
+            <div class="time-label">Giờ</div>
+        </div>
+
+        <div class="time-box">
+            <div class="time-number" id="minutes">0</div>
+            <div class="time-label">Phút</div>
+        </div>
+
+        <div class="time-box">
+            <div class="time-number" id="seconds">0</div>
+            <div class="time-label">Giây</div>
+        </div>
+    </div>
+
+    <div class="message">
+    🎂  Chỉ còn 
+        <span class="highlight" id="daysText">0 Ngày</span> 
+        nữa là đến sinh nhật Bé iuuu!
+    </div>
+
+</div>
 
 <a id="loveButton" class="love-button">
   <span>Bé nhấn vào đi :3</span>
@@ -357,6 +437,48 @@ setInterval(() => {
 document.addEventListener('touchmove', function(e) {
     e.preventDefault();
 }, { passive: false });
+
+const birthday = new Date("2026-03-13T00:00:00"); // 🔥 đổi ngày ở đây
+
+const daysBig = document.getElementById("daysBig");
+const daysText = document.getElementById("daysText");
+const hoursEl = document.getElementById("hours");
+const minutesEl = document.getElementById("minutes");
+const secondsEl = document.getElementById("seconds");
+
+const countdownContainer = document.getElementById("countdownContainer");
+const loveButton = document.querySelector(".love-button");
+
+function updateCountdown() {
+    const now = new Date();
+    const diff = birthday - now;
+
+    if (diff <= 0) {
+        clearInterval(timer);
+
+        // Ẩn countdown
+        countdownContainer.style.display = "none";
+
+        // Hiện nút
+        loveButton.style.display = "inline-block";
+
+        return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    daysBig.textContent = days;
+    daysText.textContent = days + ' Ngày';
+    hoursEl.textContent = hours.toString().padStart(2, '0');
+    minutesEl.textContent = minutes.toString().padStart(2, '0');
+    secondsEl.textContent = seconds.toString().padStart(2, '0');
+}
+
+const timer = setInterval(updateCountdown, 1000);
+updateCountdown();
 </script>
 
 </body>
