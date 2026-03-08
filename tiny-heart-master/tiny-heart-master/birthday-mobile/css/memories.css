@@ -1334,7 +1334,7 @@
 	.ly-img21{
 		position: absolute;
 		width: 100%;
-		bottom: -72px;
+		bottom: 0;
 	}
 	
 	/* 盒子 */
@@ -1537,7 +1537,7 @@
 	.ly-img21{
 		position: absolute;
 		width: 100%;
-		bottom: -72px;
+		bottom: -0;
 	}
 	
 	/* 盒子 */
