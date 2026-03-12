@@ -471,10 +471,20 @@ function updateCountdown() {
     const seconds = Math.floor((diff / 1000) % 60);
 
     daysBig.textContent = days;
-    daysText.textContent = days + ' Ngày';
     hoursEl.textContent = hours.toString().padStart(2, '0');
     minutesEl.textContent = minutes.toString().padStart(2, '0');
     secondsEl.textContent = seconds.toString().padStart(2, '0');
+
+    // Text hiển thị chính
+    if (days > 0) {
+        daysText.textContent = days + " Ngày";
+    } else if (hours > 0) {
+        daysText.textContent = hours.toString().padStart(2, '0') + " Giờ";
+    } else if (minutes > 0) {
+        daysText.textContent = minutes.toString().padStart(2, '0') + " Phút";
+    } else {
+        daysText.textContent = seconds.toString().padStart(2, '0') + " Giây";
+    }
 }
 
 const timer = setInterval(updateCountdown, 1000);
